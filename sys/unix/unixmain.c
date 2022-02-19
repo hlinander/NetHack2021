@@ -330,10 +330,6 @@ main(int argc, char *argv[])
         newgame();
         wd_message();
     }
-    {
-        uint32_t uid = atoi(getenv("DB_USER_ID"));
-        rust_ipc_init(uid, ubirthday);
-    }
 
     /* moveloop() never returns but isn't flagged NORETURN */
     moveloop(resuming);
